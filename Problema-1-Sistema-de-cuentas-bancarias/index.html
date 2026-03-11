@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1: Sistema de cuentas bancarias</title>
+    <!-- <script src="./js/main.js"></script> -->
+</head>
+<body>
+    <main>
+        <h1>Sistema de cuentas bancarias</h1>
+
+        <form action="">
+            <div class="register-form">
+                <h3>Nombre:</h3>
+                <input type="text" id="name" placeholder="Nombre">
+                <h3>Numero de cuenta:</h3>
+                <input type="number" id="accountNumber" placeholder="Numero de cuenta">
+
+                <input type="button" value="Registrar" id="btnRegister">
+            </div>
+
+            <div id="deposit-form">
+                <h2>Realizar deposito</h2>
+
+                <h3>Ingresa una cantidad:</h3>
+                <input type="number" name="" id="deposi" placeholder="Cantidad a depositar">
+                
+                <input type="button" value="Depositar" id="btnDeposit">
+
+                <div id="deposit"></div>
+            </div>
+
+            <div class="withdrawBalance-form">
+                <h2>Realizar retiro</h2>
+
+                <h3>Ingresa una cantidad:</h3>
+                <input type="number" name="" id="withdraw" placeholder="Ingresa el monto a retirar">
+
+                <input type="button" value="Retirar" id="btnwithdrawBalance">
+                <div id="withdrawMoney"></div>
+            
+            </div>
+            
+            <div class="consult-form">
+                <h2>Consultar saldo</h2>
+                <input type="button" value="Consultar" id="btnConsult">
+                
+                <div id="consult"></div>
+            </div>
+        </form>
+    </main>
+
+    <!-- <script type="module" src="./js/BankAccount.js"></script>
+    <script type="module" src="./js/Person.js"></script> -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
