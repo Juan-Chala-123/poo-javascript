@@ -5,10 +5,14 @@ export class Student {
     }
 
     validateNote() {
-        if(this.score >= 3) {
-            return `El estudiante ${this.name} aprobo.`
+        if(this.name = this.name) {
+            if(this.score >= 3) {
+                return `El estudiante ${this.name} aprobo.`
+            } else {
+                return `El estudiante ${this.name} reprobo.`
+            }
         } else {
-            return `El estudiante ${this.name} reprobo.`
+            alert("Debe registrar primero un estudiante.")
         }
     }
 }
