@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background: #fafafa;
+    padding: 2rem;
+    color: #333;
+}
+
+main {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.3px;
+}
+
+h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+input[type="text"] {
+    width: calc(50% - 70px);
+    padding: 0.65rem 0.9rem;
+    margin-right: 0.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+input[type="text"]:focus {
+    border-color: #111;
+}
+
+button#addBook {
+    padding: 0.65rem 1.4rem;
+    background: #111;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+button#addBook:hover {
+    opacity: 0.8;
+}
+
+button#addBook:active {
+    opacity: 0.65;
+}
+
+#bookList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#bookList > div {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+#bookList > div:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+#bookList > div h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.2rem;
+}
+
+#bookList > div p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+#bookList > div p:last-of-type {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: #333;
+}
+
+#bookList > div button {
+    padding: 0.4rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-right: 0.5rem;
+}
+
+#bookList > div button:first-of-type {
+    background: #111;
+    color: #fff;
+    border: none;
+}
+
+#bookList > div button:first-of-type:hover {
+    opacity: 0.8;
+}
+
+#bookList > div button:last-of-type {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+#bookList > div button:last-of-type:hover {
+    border-color: #111;
+    color: #111;
+}

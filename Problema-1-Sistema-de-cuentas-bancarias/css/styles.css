@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background: #fafafa;
+    padding: 2rem;
+    color: #333;
+}
+
+main {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 2rem;
+    letter-spacing: -0.3px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.register-form,
+#deposit-form,
+.withdrawBalance-form,
+.consult-form {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.register-form:hover,
+#deposit-form:hover,
+.withdrawBalance-form:hover,
+.consult-form:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.4rem;
+    margin-top: 0.6rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: #bbb;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #111;
+}
+
+button,
+input[type="button"] {
+    padding: 0.65rem 1.4rem;
+    background: #111;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-top: 0.8rem;
+}
+
+button:hover,
+input[type="button"]:hover {
+    opacity: 0.8;
+}
+
+button:active,
+input[type="button"]:active {
+    opacity: 0.65;
+}
+
+#depositResult,
+#withdrawMoney,
+#consult {
+    margin-top: 0.8rem;
+    padding: 0.8rem 1rem;
+    background: #f5f5f5;
+    border-left: 3px solid #333;
+    border-radius: 0 8px 8px 0;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+#depositResult:empty,
+#withdrawMoney:empty,
+#consult:empty {
+    display: none;
+}

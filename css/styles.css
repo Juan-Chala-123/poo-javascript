@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+main {
+    width: 100%;
+    max-width: 860px;
+    text-align: center;
+}
+
+main::before {
+    content: 'POO JavaScript';
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+}
+
+main::after {
+    content: 'Selecciona un problema para comenzar';
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2.5rem;
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    border-color: #111;
+    color: #111;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+a:active {
+    transform: scale(0.98);
+}
