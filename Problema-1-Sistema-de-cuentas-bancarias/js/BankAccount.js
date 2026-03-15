@@ -5,26 +5,45 @@ export class BankAccount {
     }
 
     checkBalance() {
-        return this.balance
+        return {
+            success: true,
+            message: `Titular: ${this.person.getName()} | Cuenta: ${this.person.getAccountNumber()} | Saldo: $${this.balance}`,
+            data: { balance: this.balance, owner: this.person.getName() }
+        };
     }
 
     deposit(amount) {
-        if (amount <= 0) {
-            return "Monto inválido"
+        if (isNaN(amount) || amount <= 0) {
+            return { success: false, message: "Ingresa un monto válido mayor a 0" };
         }
 
-        return this.balance += amount
+        this.balance += amount;
+
+        return {
+            success: true,
+            message: `Depósito de $${amount} realizado. Saldo actual: $${this.balance}`,
+            data: { balance: this.balance }
+        };
     }
 
     withdrawMoney(amount) {
-        if (amount <= 0) {
-            return "Monto inválido"
+        if (isNaN(amount) || amount <= 0) {
+            return { success: false, message: "Ingresa un monto válido mayor a 0" };
         }
 
         if (amount > this.balance) {
-            return "Fondos insuficientes"
+            return {
+                success: false,
+                message: `Fondos insuficientes. Saldo disponible: $${this.balance}`
+            };
         }
 
-        return this.balance -= amount
+        this.balance -= amount;
+
+        return {
+            success: true,
+            message: `Retiro de $${amount} realizado. Saldo restante: $${this.balance}`,
+            data: { balance: this.balance }
+        };
     }
 }
